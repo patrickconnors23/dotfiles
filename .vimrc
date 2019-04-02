@@ -122,7 +122,7 @@ nnoremap L gt
 map # :normal i#<CR> 
 map @ :normal ^x<CR>
 
-" Ensure that capital dub fuckup goes to lower on save
+" Ensure that capital dub messup goes to lower on save
 cnoreabbrev W w
 
 " Enable copy and paste
