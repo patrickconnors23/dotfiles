@@ -92,6 +92,10 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=/usr/local/bin:$PATH
 
+export PYTHONPATH=$PYTHONPATH:/System/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/
+
+export PATH=/usr/local/bin/aws:$PATH
+
 # Set up miniconda path
 export PATH="$HOME/miniconda/bin:$PATH"
 
@@ -114,18 +118,19 @@ alias sand='cd ~/sandbox'
 
 alias zTheme='vim ~/.oh-my-zsh/custom/themes/pat.zsh-theme'
 
-alias python='python3'
-
-alias pip='pip3'
-
 alias reqfreeze='pip3 freeze > requirements.txt'
 
 alias 145vm='ssh mininet@localhost -p 1337'
+
+alias aws="/usr/local/bin/aws"
 
 ### Custom File Open Shortcut Functions ### 
 
 word() { open -a "Microsoft Word"  "$1";  }
 pdf() { open -a "Google Chrome"  "$1";  }
+
+# kill process running on specified port
+portkill() { kill -9 $(lsof -t -i:$1) }
 
 ### Progrmatically send imessage with attachment###
 im() { "$HOME/scripts/sendmsg.sh" "$1" "$2"; }
@@ -143,3 +148,12 @@ if [ -f '/Users/patrickconnors/sandbox/microEX/y/google-cloud-sdk/path.zsh.inc' 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/patrickconnors/sandbox/microEX/y/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrickconnors/sandbox/microEX/y/google-cloud-sdk/completion.zsh.inc'; fi
+if [ /Users/patrickconnors/sandbox/microEX/y/google-cloud-sdk/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+# Git log command
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+export LESSOPEN="| $(which highlight) %s --out-format xterm256 --line-numbers --quiet --force --style solarized-light"
+export LESS=" -R"
+alias less='less -m -N -g -i -J --line-numbers --underline-special'
+source /Users/patrickconnors/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
