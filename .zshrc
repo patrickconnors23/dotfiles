@@ -120,8 +120,6 @@ alias zTheme='vim ~/.oh-my-zsh/custom/themes/pat.zsh-theme'
 
 alias reqfreeze='pip3 freeze > requirements.txt'
 
-alias 145vm='ssh mininet@localhost -p 1337'
-
 alias aws="/usr/local/bin/aws"
 
 ### Custom File Open Shortcut Functions ### 

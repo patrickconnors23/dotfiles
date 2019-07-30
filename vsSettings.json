@@ -1,0 +1,26 @@
+{
+    "window.zoomLevel": -1,
+    "editor.fontFamily": "Consolas, Menlo, 'Courier New', monospace",
+    "editor.fontSize": 13,
+    "breadcrumbs.enabled": true,
+    "files.associations": {
+        "*.rmd": "markdown"
+    },
+    "prettier.tabWidth": 4,
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.suggestSelection": "first",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[python]": {},
+    "terminal.integrated.fontFamily": "\"Meslo LG M DZ for Powerline\"",
+    "terminal.integrated.rendererType": "dom",
+    "workbench.colorTheme": "Atom One Dark"
+}
+
