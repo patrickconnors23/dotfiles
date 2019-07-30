@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Easily set up current dev environment on any machine
+Easily set up current dev environment on any machine.
 
 ### Steps
 
