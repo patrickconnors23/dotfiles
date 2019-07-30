@@ -17,7 +17,8 @@ Easily set up current dev environment on any machine
 4. Update terminal theme
     1. `mv pat.zsh-theme ~/.oh-my-zsh/custom/themes/pat.zsh-theme'`
 5. Install vim plugins/ macvim if needed
-    1. `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+    1. `brew install macvim`
+    2. `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 6. Install editors
     1. [IntelliJ](https://www.jetbrains.com/idea/)
     2. [VSCode](https://code.visualstudio.com/)
