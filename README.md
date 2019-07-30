@@ -14,6 +14,7 @@ Easily set up current dev environment on any machine
     2. `chsh -s /bin/zsh`
 3. Install zsh [plugins](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)
     1. [git]()
+    2. [syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 4. Update terminal theme
     1. `mv pat.zsh-theme ~/.oh-my-zsh/custom/themes/pat.zsh-theme'`
 5. Install vim plugins/ macvim if needed
