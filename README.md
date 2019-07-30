@@ -26,6 +26,11 @@ Easily set up current dev environment on any machine
     1. Extension List found in folder
     2. `code --install-extension XXX`
     3. Paste settings.json into the vscode settings.json
+8. Other apps to configure:
+    1. iMessage
+    2. Chrome
+    3. Spotify
+    4. Notion
 
 #### Notes
 
