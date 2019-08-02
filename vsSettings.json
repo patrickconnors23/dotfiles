@@ -21,6 +21,15 @@
     "[python]": {},
     "terminal.integrated.fontFamily": "\"Meslo LG M DZ for Powerline\"",
     "terminal.integrated.rendererType": "dom",
-    "workbench.colorTheme": "Atom One Dark"
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorCustomizations": {
+        "terminal.ansiMagenta": "#C678DD",
+        "terminal.ansiYellow": "#E5C07B",
+        "terminal.ansiBlue": "#61AFEF",
+        "terminal.ansiBlack": "#282C34",
+        "terminal.ansiGreen": "#98C379",
+        "terminal.ansiRed": "#E06C75"
+    },
+    "terminal.explorerKind": "external"
 }
 
