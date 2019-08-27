@@ -87,7 +87,23 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CONNECTION" ]]; then
-    prompt_segment $PRIMARY_FG white  " %(!.%{%F{yellow}%}.)$user "
+		if [[ "$user" == "patrickconnors" ]]; then
+			prompt_segment $PRIMARY_FG white  "  👨‍💻 "
+		else
+			prompt_segment $PRIMARY_FG white  " %(!.%{%F{yellow}%}.)$user "
+		fi
+  fi
+}
+
+parse_branch() {
+  var=$1
+  if [[ ${#var} -lt 8 ]]; then
+    echo "$var"
+  else
+    # first=$(echo ${var:0:4})
+    # last=${var: -5}
+    # echo "$first...$last"
+    echo $var
   fi
 }
 
@@ -104,12 +120,13 @@ prompt_git() {
 			bColor=yellow
       ref="${ref} $PLUSMINUS"
     else
-      color=green
-			bColor=black
+      color=black
+			bColor=green
       ref="${ref} "
     fi
     if [[ "${ref/.../}" == "$ref" ]]; then
-      ref="$BRANCH $ref"
+      parsedBranch=$(parse_branch $ref)
+      ref="$BRANCH $parsedBranch"
     else
       ref="$DETACHED ${ref/.../}"
     fi
@@ -179,4 +196,3 @@ prompt_agnoster_setup() {
 }
 
 prompt_agnoster_setup "$@"
-
