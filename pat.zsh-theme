@@ -97,13 +97,11 @@ prompt_context() {
 
 parse_branch() {
   var=$1
-  if [[ ${#var} -lt 8 ]]; then
+  if [[ ${#var} -lt 12 ]]; then
     echo "$var"
   else
-    # first=$(echo ${var:0:4})
-    # last=${var: -5}
-    # echo "$first...$last"
-    echo $var
+    first=$(echo ${var:0:12})
+    echo "$first..."
   fi
 }
 
@@ -114,6 +112,8 @@ prompt_git() {
     test -n "$(git status --porcelain --ignore-submodules)"
   }
   ref="$vcs_info_msg_0_"
+  refOrig=$(echo $ref)
+  ref=$(parse_branch $ref)
   if [[ -n "$ref" ]]; then
     if is_dirty; then
       color=black
@@ -124,9 +124,8 @@ prompt_git() {
 			bColor=green
       ref="${ref} "
     fi
-    if [[ "${ref/.../}" == "$ref" ]]; then
-      parsedBranch=$(parse_branch $ref)
-      ref="$BRANCH $parsedBranch"
+    if [[ "${refOrig/.../}" == "$refOrig" ]]; then
+      ref="$BRANCH $ref"
     else
       ref="$DETACHED ${ref/.../}"
     fi
